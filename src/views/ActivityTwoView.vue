@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import DashboardComponent from '@/components/DashboardComponent.vue'
+import DashboardLayout from './layouts/DashboardLayout.vue'
 </script>
 
 <template>
-  <DashboardComponent> dlkmclssdk </DashboardComponent>
+  <DashboardLayout> dlkmclssdk </DashboardLayout>
 </template>
