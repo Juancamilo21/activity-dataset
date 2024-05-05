@@ -1,5 +1,13 @@
 # activity-dataset
 
+## Integrantes del grupo:
+- Juan Camilo Arrieta Bernal
+- Jesús David Bula Acosta
+- Robert Bracamonte
+- Sebastián Andrés Solano Sotelo
+
+Carlos Oyola
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
