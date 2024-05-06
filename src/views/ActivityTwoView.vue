@@ -77,7 +77,7 @@ onMounted(async () => {
         </select>
       </div>
       <div class="w-full">
-        <label for="" class="">Opciones de filtro</label>
+        <label for="" class="">Opciones</label>
         <select
           v-model="param.options"
           id="countries"
