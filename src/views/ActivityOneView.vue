@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { Params } from '@/interfaces/params'
-import type { Registers } from '@/interfaces/registers'
+import DashboardLayout from './layouts/DashboardLayout.vue'
+import type { Params } from '@/types/params'
+import type { Registers } from '@/types/registers'
 import { getRequest } from '@/shared/requests'
 import { onMounted, ref } from 'vue'
-import DashboardLayout from './layouts/DashboardLayout.vue'
 
 const items = ref<Registers[]>()
 const periods = ref<string[]>()
@@ -18,15 +18,12 @@ const param = ref<Params>({
 
 const endpoint = '/r86y-229a.json'
 
-/**
- * Se arma la URL dinamicamnete teniendo en cuenta los filtros seleccionados
- */
 async function selectedQueryParams() {
   const { period, faculty, program } = param.value
   let queryParams = endpoint
-  if (period) queryParams += (queryParams.includes('?') ? '&' : '?') + 'periodo=' + period
-  if (faculty) queryParams += (queryParams.includes('?') ? '&' : '?') + 'facultad=' + faculty
-  if (program) queryParams += (queryParams.includes('?') ? '&' : '?') + 'programa=' + program
+  if (period) queryParams += (queryParams.includes('?') ? '&' : '?') + `periodo=${period}`
+  if (faculty) queryParams += (queryParams.includes('?') ? '&' : '?') + `facultad=${faculty}`
+  if (program) queryParams += (queryParams.includes('?') ? '&' : '?') + `programa=${program}`
   const data = await getRequest(queryParams)
   items.value = data
 }

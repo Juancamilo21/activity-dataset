@@ -1,4 +1,4 @@
-import type { Registers } from '@/interfaces/registers'
+import type { Registers } from '@/types/registers'
 import axiosInstance from './axios.instance'
 
 export async function getRequest(endpoint: string) {
